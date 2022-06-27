@@ -28,3 +28,7 @@ Once this is done, click review and create (the other three settings pages can b
 6. Click run, a mini console should appear. Click run again, and you should at least see some output. If you left it default, it should look very similar to below.
 ![Picture of code editor](images/Step7.png)
 That's it! You've successfully created a basic Serverless function which responds to a HTTP trigger. For the URL, click "Get function URL", next to test/run, paste into your favourite browser and you'll get the text response.
+# Documentation
+Serverless functions are a fantastic offering of cloud services, as they allow for super easy deployment of APIs without the hassle. Simply code and go. Some more documentation can be found below:  
+[Azure CLI for Functions](https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest)  
+[Microsoft Docs (Azure Functions)](https://docs.microsoft.com/en-us/azure/azure-functions/)  
