@@ -16,7 +16,7 @@ While not required, having completed the Azure Fundamentals (AZ-900), AWS Cloud 
 I highly recommend having an Azure Free Tier account, or if you have access to A Cloud Guru, utilising their Cloud Playground.  
 A Cloud Guru: [A Cloud Guru](https://acloudguru.com/)  
 Azure sign-up (Credit card required): [Azure Free Account](https://azure.microsoft.com/en-gb/free/)  
-Azure Cloud Fundamentals: [Azure Cloud Fundamentals](docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/)
+Azure Cloud Fundamentals: [Azure Cloud Fundamentals](https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/)
 # How-to:
 For each topic, there will be an included folder above, in the GitHub repository.
 # Topics
