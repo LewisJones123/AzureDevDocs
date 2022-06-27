@@ -27,7 +27,7 @@ Leave the public and inbound ports as default. Since we won't be leaving our VM 
 (RECOMMENDED: By the create button, you can press "Download a template for automation". This can be super handy - I recommend downloading for future use!)  
 If validation fails, review your VM, and then DEPLOY!  
 6. Once you get the following screen, go to step 7.
-![Picture of successful deployment](images/step5.png)
+![Picture of successful deployment](images/Step5.png)
 7. At the bottom, press "Go to resource". We are now going to connect using Remote Desktop Connection (Windows) or Windows Remote Desktop (Mac, download from App Store).  
 8. On this page, click connect, and then RDP. You will then see the following screen, where you will need to Download the RDP file.
 ![Picture of RDP file download screen](images/Step6.png)
