@@ -38,7 +38,7 @@ If validation fails, review your VM, and then DEPLOY!
 10. Accept any warnings that may pop up - and you're in! Wait for anything to load, and then you'll be presented with a familiar Windows desktop.
 ![Picture of Windows Desktop](images/Step10.png)
 11. You can verify your system specs by going into task manager and going into the performance tab - you should have the same amount of cores and RAM as you chose. That's it - you've setup your first Windows virtual machine!
-12. ![Picture of RDP settings screen](images/Step9.png)
+![Picture of RDP settings screen](images/Step9.png)
 # How-to: Azure CLI/Cloud Shell
 Thankfully, it's possible to create a full VM in a single command on the Azure CLI/Cloud Shell.
 The syntax is below, along with an example command to create the same VM as the one created using the GUI.  
