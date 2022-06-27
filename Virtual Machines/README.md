@@ -45,7 +45,10 @@ The syntax is below, along with an example command to create the same VM as the 
 
 To create a very similar VM to what we have just created in the GUI environment:
 
-   az vm create -n MyVM -g AzureDevDocs --image Win2022Datacenter --size Standard_D1_v2 --admin-username AzureDevDocs --admin-password Password123!  
+   ```shell 
+   az vm create -n MyVM -g AzureDevDocs --image Win2022Datacenter --size Standard_D1_v2 --admin-username AzureDevDocs --admin-password Password123!
+   ```  
+
 You will then recieve a message which outlines the public, private IPs as well as the resourceGroup. Visit your resource group to see the new VM listed.
 
 Breaking down each component:  
