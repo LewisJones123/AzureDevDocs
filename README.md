@@ -2,7 +2,7 @@
 # Welcome!
 
 This guide is my way of revising for the AZ-204 (Azure Developer) examination. This guide will have the following information for each module:  
-A small recap of each topic
+A small recap of each topic  
 What the Azure Free Tier entitles you to  
 How-to: Azure Browser GUI  
 How-to: Azure CLI/Cloud Shell  
