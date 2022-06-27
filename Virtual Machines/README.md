@@ -39,3 +39,24 @@ If validation fails, review your VM, and then DEPLOY!
 ![Picture of Windows Desktop](images/Step10.png)
 11. You can verify your system specs by going into task manager and going into the performance tab - you should have the same amount of cores and RAM as you chose. That's it - you've setup your first Windows virtual machine!
 12. ![Picture of RDP settings screen](images/Step9.png)
+# How-to: Azure CLI/Cloud Shell
+1. Thankfully, it's possible to create a full VM in a single command on the Azure CLI/Cloud Shell.
+The syntax is below, along with an example command to create the same VM as the one created using the GUI.  
+
+To create a very similar VM to what we have just created in the GUI environment:
+
+   az vm create -n MyVM -g AzureDevDocs --image Win2022Datacenter --size Standard_D1_v2 --admin-username AzureDevDocs --admin-password Password123!  
+You will then recieve a message which outlines the public, private IPs as well as the resourceGroup. Visit your resource group to see the new VM listed.
+
+Breaking down each component:  
+-n: Name of the VM.  
+-g: Resource group of the VM.  
+--image: Image for the VM.  
+--size: Size of the VM (be careful not to choose a massive size accidentally!)  
+--admin-username: Admin username of the VM.  
+--admin-password: Admin password of the VM.    
+# Supporting Documentation
+That's it for Virtual Machines! Congratulations on setting up your first Virtual Machine - have a play around on your VM before closing it down again! You might want to keep a basic VM (Free tier or cheap) available for Networking sections such as subnets.  
+Here are some helpful links if you wish to explore Virtual machines further:  
+[Microsoft Azure Docs](https://docs.microsoft.com/en-us/azure/virtual-machines/)  
+[Microsoft Azure CLI Docs](https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest)  
