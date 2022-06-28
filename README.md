@@ -30,8 +30,8 @@ Containers 🧪
 Azure Web Apps 🧪   
 Azure Microservices ❌  
 Azure Functions (Serverless Functions) ✔️    
-CosmosDB ❌   
-Blob Storage ❌    
+CosmosDB 🧪   
+Blob Storage 🧪    
 SAS (Shared Access Signatures) ❌   
 Access Control Lists ❌    
 App Configuration ❌  
