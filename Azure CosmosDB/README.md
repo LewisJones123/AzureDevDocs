@@ -36,7 +36,9 @@ You can write programs within CosmosDB. These programs can be incorporated into 
 All of these scripts can be executed using the Azure portal, Javascript integrated queries, or CosmosDB SQL Client SDKS.
 All transactions within CosmosDB are ATOMIC - meaning they are not final unless the transaction has been fully completed. 
 Performance can vary, but mostly runs on bulk data operations. 
- 
+# How-to: Azure GUI browser
+
+# How-to: Azure CLI/Cloud Shell 
 
  
 
