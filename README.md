@@ -22,24 +22,24 @@ For each topic, there will be an included folder above, in the GitHub repository
 # Topics
 
 During your exploration of this guide, I will be covering many topics.   
-
+✔️ - Documentation complete 🧪 - In Progress ❌ - Not started  
 These topics include:  
-Custom Templates & how to use them  
-Virtual Machines  
-Containers  
-Azure Web Apps  
-Azure Microservices  
-Azure Functions (Serverless Functions)  
-CosmosDB  
-Blob Storage  
-SAS (Shared Access Signatures)  
-Access Control Lists  
-App Configuration  
-Key Vault  
-Azure Monitor  
-Application Insights  
-Content Delivery Networks  
-FrontDoor
+Custom Templates & how to use them ❌  
+Virtual Machines ✔️   
+Containers 🧪  
+Azure Web Apps 🧪   
+Azure Microservices ❌  
+Azure Functions (Serverless Functions) ✔️    
+CosmosDB ❌   
+Blob Storage ❌    
+SAS (Shared Access Signatures) ❌   
+Access Control Lists ❌    
+App Configuration ❌  
+Key Vault ❌  
+Azure Monitor ❌  
+Application Insights ❌
+Content Delivery Networks ❌  
+FrontDoor ❌
 
 
 
