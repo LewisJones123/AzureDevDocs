@@ -44,7 +44,7 @@ You should get the following output:
 ![Image of console output](images/part2step4.png)  
 5. Go to your favourite browser, and type https://localhost:5001/ in your search bar. You might get a warning about certificates, simply hit advanced and proceed. You should see the following screen:  
 ![Image of browser](images/part2step5.png)
-6. We are now ready to deploy this shell app to Azure!
+6. We are now ready to deploy this shell app to Azure! First, press Control, Shift and P to open the command pallette, and search for "Azure App Service: Deploy to web app". If this does not appear, please check you have installed the Azure Tools extension.
 # How-to: Azure CLI/Cloud Shell
 Basic web app creation:
 ```shell
