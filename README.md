@@ -28,7 +28,7 @@ Custom Templates & how to use them ❌
 Virtual Machines ✔️   
 Containers 🧪  
 Azure Web Apps 🧪   
-Azure Microservices ❌  
+Azure Microservices 🧪  
 Azure Functions (Serverless Functions) ✔️    
 CosmosDB ✔️   
 Blob Storage ✔️    
