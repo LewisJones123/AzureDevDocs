@@ -55,6 +55,18 @@ Once you have Azure Data Explorer installed/open, the left hand column should ha
 ![Image of Azure Data Explorer](images/step6.png)
 7. Double click your document to download it, and then if its a text document, it should open in notepad as below. We have successfully uploaded a file to Blob storage!
 ![Image of notepad file](images/step7.png)
+# How-to: Azure CLI
+You can create a new storage account with a pretty simple command. Uploading data should either be automated through SDKs, or using the GUI interface, to ensure you don't either accidentally upload a huge amount of data which could cause huge bills, or sensitive data.
+The command for creating a new storage account is:  
+```shell
+az storage account create -n azuredevdocsblob1 -g AzureDevDocs -l ukwest --sku Standard_LRS
+```
+Note: the name after -n flag must be all lowercase, and can only contain numbers or letters.  
+After completion of this, you are then able to go into the GUI and manually add files.  
+If you do wish to add files via the command line, the following code can be executed:  
+```shell
+az storage blob upload -f /path/to/file -c mycontainer -n myBlob
+```
 # Documentation
 [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-gb/services/storage/blobs/)  
 [Blob Storage Pricing](https://azure.microsoft.com/en-gb/pricing/details/storage/blobs/) - Worth a look to see the vast price differences between Hot, Cold and Archive!  
