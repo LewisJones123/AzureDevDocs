@@ -1,8 +1,16 @@
 # AzureDevDocs
 # Azure Web Apps - Recap
-
+Azure Web Apps is an Azure offering which allows you to deploy your web applications in the cloud, while being able to continually maintain and update them using continuous deployment solutions such as GitHub Actions, which in turn gives users the benefit of quicker updates, better features and easy patching.  
+Azure Web Apps supports a vast array of Services and platforms, including Wordpress, Umbraco, as well as Windows and Linux platforms.  
+Auto-scaling both up and out & load balancing are both built-in to Azure Web Apps too.  
+Azure Web Apps is a great component of running with DevOps, as it compliments both the CI/CD pipeline as well as abilities to rollback, and swapping from staging to production in seconds, rather than minutes and hours.
 
 # How-to: GUI
+> **Note**
+> As part of the free tier, you recieve the following benefits:
+> - Static Web App: 100GB bandwidth per subscription
+> - 2 custom domains
+> - 0.5GB storage per app
 1. On the Azure search bar, search for "App Services".
 ![Picture of search results](images/Step1.png)
 2. Once on the App Services page, on the top left, click Create.
