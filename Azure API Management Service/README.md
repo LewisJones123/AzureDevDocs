@@ -7,6 +7,9 @@ To find out in much more detail, visit the Microsoft official documentation [her
 # Azure Free Tier Offering
 Due to the nature of the service, there is NO free offering through Azure Free Services. All tiers of plan within the service are paid, each having their own separate benefits and drawbacks.
 # How-to: Setup an API Management Service instance
+> **Warning**  
+> Due to the nature of the service, you are unable to use this service in the Azure Free Tier.  
+> Please note that all tiers, including Developer, have a fixed hourly cost to utilise. I am not responsible if you incur unexpected charges.  
 1. In the Azure portal, search for "API Management Service". 
 ![Image of portal search for API Management Service](images/step1.png)
 2. Use an existing subscription, choose your own region, give it a meaningful name, give it an organisation name, and an email (ideally the email used to sign-up to Azure, if possible!).  
