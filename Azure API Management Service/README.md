@@ -14,4 +14,7 @@ For pricing tier, simply choose Developer, as we are not creating a production-g
 See below for an example deployment template:
 ![Image of example API deployment setup](images/step2.png)
 ![Image of example API deployment setup](images/step2p2.png)
-3. Review and create.
+3. Review and create.  
+> **Warning**  
+> Deployment will take an extremely long time - upwards of 1 hour. Be prepared to wait a VERY LONG time.  
+> It is recommended to leave time for this to deploy!
