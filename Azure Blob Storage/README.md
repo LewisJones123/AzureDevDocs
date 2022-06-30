@@ -6,11 +6,7 @@ Blob containers are object-oriented storage. This means its very similar to your
  - Append - Optimised for append operations - updating files. Maximum size is also 4.75TiB.
  - Page  - Used for random access files. Also used for Virtual Hard Drives. Maximum size is 8TiB.
 There are also storage accounts - two different versions.
-You want to use V2 for the vast majority of the time, with V1 also being available for legacy applications - but it is not recommended for general use.
-# Azure Free Tier Offering
-
- - 5 GB locally redundant storage, in the hot (discussed later) tier, with 20,000 read and 10,000 write operations.
-Please note that this is only available for the first 12 months. Afterwards it becomes a paid service only.
+You want to use V2 for the vast majority of the time, with V1 also being available for legacy applications - but it is not recommended for general use.  
 
 # Blob Storage - Alternative types of storage
 Within blob storage there are also other options:
@@ -24,6 +20,10 @@ Within blob storage there are also other options:
  - Cool - Data is archived in this tier. Data can take time to access, but is much cheaper to store.
  - Archive - Data is archived even deeper in this storage. Data can take many hours to access, but it is extremely cheap compared to Hot storage, and even cold storage.
 # How-to: Create a new Hot storage blob
+> **Note**  
+> As part of the Azure Free tier offering, you recieve the following for the first 12 months following the opening of an account:
+>- 5 GB locally redundant storage, in the hot (discussed later) tier, with 20,000 read and 10,000 write operations.  
+
 1. In your azure console, search for "Storage Account" and click it.
 ![Image of searchbox](images/step1.png)
 2. Click 'Create' in the top left corner.
