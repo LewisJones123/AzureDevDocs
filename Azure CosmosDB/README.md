@@ -9,12 +9,6 @@ The languages that are supported within CosmosDB are:
  - Cassandra
  - Gremlin (Graph-based Databases)
 
-# Azure Free Tier offering
-As part of the Azure Free Tier, you get the following benefits for free: 
-
- - 1000 Request units per second
- - 25GB storage
- For testing, this is super handy as you are unlikely to ever hit the maximum request units per second. However, you are unable to retain data in multiple locations using the free tier, reserved exclusively for paid tiers only. Bare this in mind if the data you want to use needs geographic redundancy or not.
 # CosmosDB - Data consistency
 As part of CosmosDB data redundancy, you can choose how your data is kept. The most consistent offerings are the most expensive, with little to no consistency being much cheaper.
 Here is a breakdown of each of the tiers available:
@@ -43,9 +37,15 @@ Azure functions are the easiest way to document the change feed - you are able t
 To do this, go onto your CosmosDB, and at the left-hand side, there is an "Add Azure Function" under "Integrations" option. CLick this, set the container you wish to have as a trigger, and then create the function. 
 ![Picture of Azure Function creation](images/AzureFunctionCosmosDB.png)
 This will then integrate into an existing Azure Function App, and will trigger a log when you add to the database.
-# How-to: Azure GUI browser
-Creating a CosmosDB instance is pretty straightforward. To start with, we must go to the Azure search bar and search for "CosmosDB".
-![Picture of Azure console search](images/step1.png)
+# How-to: Azure GUI browser  
+> **Note**  
+> As part of the Azure Free Tier, you get the following benefits for free:   
+> - 1000 Request units per second  
+> - 25GB storage    
+
+For testing, this is super handy as you are unlikely to ever hit the maximum request units per second. However, you are unable to retain data in multiple locations using the free tier, reserved exclusively for paid tiers only. Bare this in mind if the data you want to use needs geographic redundancy or not.
+Creating a CosmosDB instance is pretty straightforward. To start with, we must go to the Azure search bar and search for "CosmosDB".  
+![Picture of Azure console search](images/step1.png)  
 Once we are on the CosmosDB page, click "Create", so we can create a new CosmosDB instance. 
 ![Picture of Azure CosmosDB create button](images/step2.png)  
 For API choice, we want to use Core (SQL).  
