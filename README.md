@@ -40,6 +40,8 @@ Azure Monitor ❌
 Application Insights ❌
 Content Delivery Networks ❌  
 FrontDoor ❌
+Event Grids ❌  
+API Management services ❌  
 
 
 
