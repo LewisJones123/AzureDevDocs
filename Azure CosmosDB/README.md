@@ -36,8 +36,27 @@ You can write programs within CosmosDB. These programs can be incorporated into 
 All of these scripts can be executed using the Azure portal, Javascript integrated queries, or CosmosDB SQL Client SDKS.
 All transactions within CosmosDB are ATOMIC - meaning they are not final unless the transaction has been fully completed. 
 Performance can vary, but mostly runs on bulk data operations. 
+# CosmosDB - Change Feed Notifications
+The change feed is enabled by default on all Cosmos Accounts. This feed includes both inserts and updates into your container.  
+There are, however, some restrictions with the Change Feed. It only stores the most recent change to a given item, so if an item is changed multiple times, you won't be able to see each individual edit - unless you document each individual edit somewhere.  
+Azure functions are the easiest way to document the change feed - you are able to add a CosmosDB trigger, which means every container edit triggers the function.  
+To do this, go onto your CosmosDB, and at the left-hand side, there is an "Add Azure Function" under "Integrations" option. CLick this, set the container you wish to have as a trigger, and then create the function. 
+![Picture of Azure Function creation](images/AzureFunctionCosmosDB.png)
+This will then integrate into an existing Azure Function App, and will trigger a log when you add to the database.
 # How-to: Azure GUI browser
-
+Creating a CosmosDB instance is pretty straightforward. To start with, we must go to the Azure search bar and search for "CosmosDB".
+![Picture of Azure console search](images/step1.png)
+Once we are on the CosmosDB page, click "Create", so we can create a new CosmosDB instance. 
+![Picture of Azure CosmosDB create button](images/step2.png)  
+For API choice, we want to use Core (SQL).  
+Use the same resource group as you've done for the rest of the components.  
+Account name is your choice, but make sure it is something reasonable. Note you cannot have capitalisation in your name here.  
+All other settings can be left as default for now.  
+Click 'Create' to launch the DB. It may take a long time to create the database, due to the nature of the system.  
+Once deployment is complete, you can click "Go to Resource" to be presented with a first-time setup wizard.  
+![Picture of Azure CosmosDB create button](images/step4.png)
+We firstly want to click "create items container" as this will automatically create our new container for us, with the RU/s preset to 400 (note, you get a maximum of 1,000 RU/s combined in free tier).
+  
 # How-to: Azure CLI/Cloud Shell 
 
  
