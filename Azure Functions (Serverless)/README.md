@@ -1,11 +1,10 @@
 # AzureDevDocs
 # Azure Functions - recap
 Azure Functions is Microsoft's Serverless offering. Want to deploy an API but not worry about the underlying OS? Azure Functions are the perfect solution for this. Azure Functions makes it easy to deploy an API without the hassle of having to patch the system, provision resources and automatically scale based on demand - Functions do that for you.
-# Azure Free Tier offering
-Under the Azure Free Tier, you get the following:  
-• 1 million requests  
-That's all! You get a million refreshes a month - plenty for testing purposes!
 # How-to: Azure Browser GUI
+> **Note**  
+> As part of the Azure Free Tier, you get the following benefits:
+> - First 1,000,000 requests (including failed) are free per month  
 1. First, search "Function App" in the Azure console, and click the lighting symbol.
 ![Picture of Azure search box](images/Step1.png)
 2. Next, click Create in the top left corner, to launch the Function App wizard. Use the same Resource Group you've used before, or create a new one if you haven't.  
