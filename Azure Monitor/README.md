@@ -27,16 +27,17 @@ We need to be informed if there is an issue - this is where Alerts comes in. On 
 
 For our example, we will be creating an Alert in our Azure Function to check for Exceptions. If there are more than 2 exceptions in a five minute period, the alert will be triggered.  
 In the creation screen, the signal choice will be "Exceptions".  
-![Image of signals screen](images/step2.png)
+![Image of signals screen](images/step2.png)  
 The next choice we have is for the alert logic. We want to check for the number of exceptions being greater than 1 in a five minute period, polling every minute.  
 ![Image of polling screen](images/step3.png)  
 Once completed, in the details tab, we must select a severity level.
-> **Note**
-> Levels 3 & 4 are information tiers.  
-> **Warning**
-> Level 2 is a warning tier.   
-> **Error**
-> Level 0 and 1 are for critical and errors, respectively.  
+> **Note**:
+> Levels 3 & 4 are information tiers.
+  
+> **Warning**:
+> Level 2 is a warning tier.  
+ 
+> ❗Error: Level 0 and 1 are for critical and errors, respectively.  
 
 You must also give the alert a name, and optionally, a description.
 ![Image of alert monitoring screen](images/step4.png)  
