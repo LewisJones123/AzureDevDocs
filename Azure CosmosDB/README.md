@@ -37,27 +37,21 @@ Azure functions are the easiest way to document the change feed - you are able t
 To do this, go onto your CosmosDB, and at the left-hand side, there is an "Add Azure Function" under "Integrations" option. CLick this, set the container you wish to have as a trigger, and then create the function. 
 ![Picture of Azure Function creation](images/AzureFunctionCosmosDB.png)
 This will then integrate into an existing Azure Function App, and will trigger a log when you add to the database.
+<<<<<<< HEAD
+# How-to: Azure GUI browser
+Creating a CosmosDB instance is pretty straightforward. To start with, we must go to the Azure search bar and search for "CosmosDB".
+![Picture of Azure console search](images/step1.png)
+=======
 # How-to: Azure GUI browser  
 > **Note**  
 > As part of the Azure Free Tier, you get the following benefits for free:   
 > - 1000 Request units per second  
-> - 25GB storage    
-
-For testing, this is super handy as you are unlikely to ever hit the maximum request units per second. However, you are unable to retain data in multiple locations using the free tier, reserved exclusively for paid tiers only. Bare this in mind if the data you want to use needs geographic redundancy or not.
-Creating a CosmosDB instance is pretty straightforward. To start with, we must go to the Azure search bar and search for "CosmosDB".  
-![Picture of Azure console search](images/step1.png)  
-Once we are on the CosmosDB page, click "Create", so we can create a new CosmosDB instance. 
-![Picture of Azure CosmosDB create button](images/step2.png)  
-For API choice, we want to use Core (SQL).  
-Use the same resource group as you've done for the rest of the components.  
 Account name is your choice, but make sure it is something reasonable. Note you cannot have capitalisation in your name here.  
 All other settings can be left as default for now.  
 Click 'Create' to launch the DB. It may take a long time to create the database, due to the nature of the system.  
 Once deployment is complete, you can click "Go to Resource" to be presented with a first-time setup wizard.  
-![Picture of Azure CosmosDB create button](images/step4.png)
 We firstly want to click "create items container" as this will automatically create our new container for us, with the RU/s preset to 400 (note, you get a maximum of 1,000 RU/s combined in free tier).
   
 # How-to: Azure CLI/Cloud Shell 
 
  
-
