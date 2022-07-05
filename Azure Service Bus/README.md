@@ -18,7 +18,7 @@ There are three tiers available within Service bus (for this, choose basic):
    - Standard: Comes with most features, including topics/subscriptions, Relays, and larger messages (up to 256KB). Costs $10 per 12,500,000 responses.
    - Premium: Comes with all features, including messages up to and including 100MB, as well as more computing power available. Extremely expensive - up to 16 Messaging Units are available per instance, charged at approximately $677 per month, assuming use for 730 hours a month.
 
-Here's what it should look like:
+Here's what it should look like:  
 ![Image of setup screen](images/step3.png)  
 Note you will not need to edit any other options. Simply review and create!  
 Once you have created the resource, we have created a Service bus!  
