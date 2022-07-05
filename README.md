@@ -42,5 +42,6 @@ FrontDoor ❌
 Event Grids ❌  
 API Management services ❌  
 
-
+Some extra topics:  
+Azure Notification Hub ✔️  
 
