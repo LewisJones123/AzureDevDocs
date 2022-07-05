@@ -34,10 +34,9 @@ CosmosDB ✔️
 Blob Storage ✔️    
 SAS (Shared Access Signatures) ❌   
 Access Control Lists ❌    
-App Configuration ❌  
+App Configuration 🧪  
 Key Vault ❌  
-Azure Monitor ❌  
-Application Insights ❌
+Azure Monitor/Application Insights 🧪  
 Content Delivery Networks ❌  
 FrontDoor ❌
 Event Grids ❌  
