@@ -41,4 +41,6 @@ Once completed, in the details tab, we must select a severity level.
 You must also give the alert a name, and optionally, a description.
 ![Image of alert monitoring screen](images/step4.png)  
 Click create and success! You are now monitoring whichever application you have created the monitor for.  
-I recommend you test your function - try and get some errors to trigger your alert!
+I recommend you test your function - try and get some errors to trigger your alert!  
+To check your alert exists, on the main Monitor page, click "Alerts" in the left-hand column, and then "Alert Rules". You should see some defaults, and then your exception similar to the image below:
+![Image of Alert Rules](images/step5.png)  
