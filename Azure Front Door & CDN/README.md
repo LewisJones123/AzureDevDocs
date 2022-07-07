@@ -8,7 +8,7 @@ There are two tiers available:
 - Premium:
 - Same as Standard, but adds extensive security capabilities, bot protection, Azure Private Link support, integration with Microsoft Threat Intelligence and security analytics. 
 # How-to: Azure GUI/Portal  
-> **Info**  
+> **Note**  
 > There are no current free features for Azure Front Door/CDN. There is a flat $35 charge (divided hourly) per month for Standard and $335 for Premium. 
 
 Before setting up a front door, you will need to have at least a blob storage, static web app or alternate hosted product to be distributed globally.  

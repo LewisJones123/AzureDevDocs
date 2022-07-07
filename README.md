@@ -37,10 +37,10 @@ Access Control Lists ❌
 App Configuration 🧪  
 Key Vault ❌  
 Azure Monitor/Application Insights 🧪  
-Content Delivery Networks ❌  
-FrontDoor ❌
-Event Grids ❌  
-API Management services ❌  
+Content Delivery Networks ✔️  
+FrontDoor ✔️
+Event Grids ✔️  
+API Management services ✔️  
 
 Some extra topics:  
 Azure Notification Hub ✔️  
