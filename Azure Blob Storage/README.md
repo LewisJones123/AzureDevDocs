@@ -49,7 +49,7 @@ After ensuring that all of these match up correctly, press Review + Create!
 4. After creation, we want to go to the new storage account and check out how we can browse data. On the resource page, let's upload something. Click the "upload" button.
 ![Image of storage account dashboard](images/step4.png)
 5. Upload any file. This could be a picture of your dog, or a simple text document. I've created a text document and will upload that to the blob. Click upload, and wait for the success message in the bottom right.  
-If you want to specify what type of Blob that this file will be in, click Advanced. In this section, you can specify the blob type and size for this/these files.
+If you want to specify what type of Blob that this file will be in, click Advanced. In this section, you can specify the blob type and size for this/these files.  
 ![Image of successfully uploaded document](images/step5.png)
 1. Next, we want to check out that this file has been uploaded. Click "Open in Explorer". You will need to download Azure Data Explorer if you do not have it already.
 Once you have Azure Data Explorer installed/open, the left hand column should have your Azure subscription. Here you can find your new storage, blob container and hopefully your document!
@@ -62,7 +62,7 @@ Generate an SAS key, add to end of URL to load the document.
 For the most cost optimal solution, you are able to implement lifecycle management into your storage accounts. This means that files not accessed after a certain amount of time will be moved into cold storage, and eventually if still not accessed, moved into archive storage.  
 To implement this, let's use our recently uploaded file in Storage and update it so that it can change storage type after a certain amount of days.  
 1. Firstly, go to your blob storage. The option we are looking for is "Lifecycle Management", located underneath "Data Management". You may need to scroll down to find this.  
-> **Info**  
+> **Note**  
 > If Enable Access Tracking is not ticked, enable it!  
 
 ![Image of blob storage searching options](images/lifecyclestep1.png)  
@@ -76,7 +76,7 @@ By default, Microsoft recommends that we move:
 > **Warning**  
 > If you require immediate access, or relatively quick access, it is HIGHLY RECOMMENDED you do NOT place any data in Archive Storage. There is a charge for rehydrating the data, and it will take an extremely long time (upwards of 12+ hours) to rehydrate Archived data.  
 
-> **Info**  
+> **Note**  
 > If you get an Error: daysAfterLastTierChangeTimeGreaterThan is not supported for the account, ensure "enable access tracking" is enabled in Lifecycle Management.  
 > 
 Here is what the rule should look like:  
