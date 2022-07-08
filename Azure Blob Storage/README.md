@@ -48,13 +48,41 @@ After ensuring that all of these match up correctly, press Review + Create!
 
 4. After creation, we want to go to the new storage account and check out how we can browse data. On the resource page, let's upload something. Click the "upload" button.
 ![Image of storage account dashboard](images/step4.png)
-5. Upload any file. This could be a picture of your dog, or a simple text document. I've created a text document and will upload that to the blob. Click upload, and wait for the success message in the bottom right.
+5. Upload any file. This could be a picture of your dog, or a simple text document. I've created a text document and will upload that to the blob. Click upload, and wait for the success message in the bottom right.  
+If you want to specify what type of Blob that this file will be in, click Advanced. In this section, you can specify the blob type and size for this/these files.
 ![Image of successfully uploaded document](images/step5.png)
-6. Next, we want to check out that this file has been uploaded. Click "Open in Explorer". You will need to download Azure Data Explorer if you do not have it already.
+1. Next, we want to check out that this file has been uploaded. Click "Open in Explorer". You will need to download Azure Data Explorer if you do not have it already.
 Once you have Azure Data Explorer installed/open, the left hand column should have your Azure subscription. Here you can find your new storage, blob container and hopefully your document!
 ![Image of Azure Data Explorer](images/step6.png)
 7. Double click your document to download it, and then if its a text document, it should open in notepad as below. We have successfully uploaded a file to Blob storage!
 ![Image of notepad file](images/step7.png)
+# How-to: Authorise requests to Blob Storage
+Generate an SAS key, add to end of URL to load the document.
+# How-to: Implement Lifecycle management  
+For the most cost optimal solution, you are able to implement lifecycle management into your storage accounts. This means that files not accessed after a certain amount of time will be moved into cold storage, and eventually if still not accessed, moved into archive storage.  
+To implement this, let's use our recently uploaded file in Storage and update it so that it can change storage type after a certain amount of days.  
+1. Firstly, go to your blob storage. The option we are looking for is "Lifecycle Management", located underneath "Data Management". You may need to scroll down to find this.  
+> **Info**  
+> If Enable Access Tracking is not ticked, enable it!  
+
+![Image of blob storage searching options](images/lifecyclestep1.png)  
+1. On the Lifecycle management page, click "add a rule". We firstly want to give it a name, and leave it to default (we do not have any append blobs):  
+![Image of rule setup](images/lifecyclestep2.png)  
+We then want to create the rule.  
+
+By default, Microsoft recommends that we move:  
+- Files not accessed for 30 to 179 days: Cold Storage.  
+- Files not accessed for 180+ days: Archive Storage.
+> **Warning**  
+> If you require immediate access, or relatively quick access, it is HIGHLY RECOMMENDED you do NOT place any data in Archive Storage. There is a charge for rehydrating the data, and it will take an extremely long time (upwards of 12+ hours) to rehydrate Archived data.  
+
+> **Info**  
+> If you get an Error: daysAfterLastTierChangeTimeGreaterThan is not supported for the account, ensure "enable access tracking" is enabled in Lifecycle Management.  
+> 
+Here is what the rule should look like:  
+![image of rules](images/lifecyclestep3.png)  
+Once submitted, you're all done!
+
 # How-to: Azure CLI
 You can create a new storage account with a pretty simple command. Uploading data should either be automated through SDKs, or using the GUI interface, to ensure you don't either accidentally upload a huge amount of data which could cause huge bills, or sensitive data.
 The command for creating a new storage account is:  
@@ -66,6 +94,10 @@ After completion of this, you are then able to go into the GUI and manually add 
 If you do wish to add files via the command line, the following code can be executed:  
 ```shell
 az storage blob upload -f /path/to/file -c mycontainer -n myBlob
+```
+For PowerShell implementation, the code is:  
+```shell
+New-AzStorageAccount -Name storageAccount -ResourceGroupName AzureDevDocs -Location ukwest -SkuName Standard_RAGRS
 ```
 # Documentation
 [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-gb/services/storage/blobs/)  
