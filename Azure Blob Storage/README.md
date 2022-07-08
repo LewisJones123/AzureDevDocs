@@ -57,7 +57,26 @@ Once you have Azure Data Explorer installed/open, the left hand column should ha
 7. Double click your document to download it, and then if its a text document, it should open in notepad as below. We have successfully uploaded a file to Blob storage!
 ![Image of notepad file](images/step7.png)
 # How-to: Authorise requests to Blob Storage
-Generate an SAS key, add to end of URL to load the document.
+We can generate a SAS key which you can then place into your URL and use as an access URL. This key can be limited to certain IP addresses, certain objects, containers and even blobs. It is extremely customisable to what you need for access.  
+SAS keys are great for anomymously allowing connection to your files, while allowing a high level of security through IP filtering.  
+To setup an SAS, first navigate to your Storage Management, and on the left hadn side there will be a section under "Shared Access Keys".  
+![Image of SAS button](images/sasstep1.png)  
+In this screen, we then want to create our key.  For this example, we want:  
+- Allowed Services: Files  
+- Allowed Resource types: Container, Object  
+- Allowed permissions: Read (BE EXTREMELY CAREFUL HERE!)  
+- Blob Versioning: Untick  
+- Allowed Blob index permissions: Untick both
+- Start/Expiry date: Your choice, although ensure its active from now, leave it on for a few hours if you wish.  
+- Allowed IP Addresses: Make sure your own IP is chosen. To find your IP, click [here.](https://whatismyipaddress.com/)  
+- Allowed Protocols: HTTPS only
+- Preferred routing: Default  
+
+Click Generate SAS and Connection String  
+We now have a Connection String, SAS token and File service SAS URL. Copy the SAS URL into your browser, and change the URL before the question mark so that you can access a file.  
+For example, https://azuredevdocsblob.file.core.windows.net/newContainer/UploadMe.txt/sv=2021-06-08&ss=bfqt&srt=o&sp=ritfx  
+(Note the URL will be much longer but I am not posting my full SAS string!)  
+Finally, press enter and if its a text file, the text contents should appear on your screen!  
 # How-to: Implement Lifecycle management  
 For the most cost optimal solution, you are able to implement lifecycle management into your storage accounts. This means that files not accessed after a certain amount of time will be moved into cold storage, and eventually if still not accessed, moved into archive storage.  
 To implement this, let's use our recently uploaded file in Storage and update it so that it can change storage type after a certain amount of days.  
