@@ -80,3 +80,92 @@ There is no current implementation for a Secret in PowerShell.
 ```Shell
 az keyvault secret set --name SecretName --vault-name AzureDevDocsVault --value SecretValue
 ```
+
+# Obtaining a secret in .NET - Tutorial
+> **Warning**
+> This tutorial will not be completable with an Azure Free Tier account, as a free tier VM will struggle to run anything.  
+When creating a secret, it's worth checking that it's actually possible to get the secret!  
+
+> **Note**
+This is a more visual guide that Microsoft has provided [here.](https://docs.microsoft.com/en-us/azure/key-vault/general/tutorial-net-virtual-machine?tabs=azure-cli) The commands and code in this guide are provided by Microsoft.  
+
+Utilising Azure VMs and the CLI we are able to do some secrets management.  
+1. Firstly, if you haven't already, provision a Windows VM. I recommend a B2s tier, with 2 CPU cores and 4GB of Memory, running Windows 10, 11, Server 2016, Server 2019 or Server 2022.  
+2. Remotely connect to your Virtual Machine using either SSH or RDP.  
+3. Once you're in, we firstly need to install the .NET core at the link [here.](https://dotnet.microsoft.com/en-us/download)  
+4. After you have installed .NET, open a Command Prompt.  
+The first commands you want to type in are (run one line at a time):  
+```Shell
+dotnet new console -n keyvault-console-app
+cd keyvault-console-app
+dotnet run
+```  
+You should see the following prompt:  
+![Picture of CMD](images/vmstep1.png)  
+This proves that we have successfully installed DotNet.  
+5. Next, we need to install Visual Studio on the VM [here.](https://visualstudio.microsoft.com)  
+6. Once installed, we then need to open Visual Studio, and then "Open a Folder". In your users folder, choose your new project that was created. The right hand column should like the following:  
+![Picture of VM Visual Studio](images/vmstep2.png)  
+7. Open Program.cs. You should see one line which is Console.WriteLine("Hello, World!"). We will be replacing this with the following code (CREDIT: Microsoft):
+```C#
+using System;
+using Azure.Core;
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+class Program
+    {
+        static void Main(string[] args)
+        {
+            string secretName = "mySecret";
+            string keyVaultName = "<your-key-vault-name>";
+            var kvUri = "https://<your-key-vault-name>.vault.azure.net";
+            SecretClientOptions options = new SecretClientOptions()
+            {
+                Retry =
+                {
+                    Delay= TimeSpan.FromSeconds(2),
+                    MaxDelay = TimeSpan.FromSeconds(16),
+                    MaxRetries = 5,
+                    Mode = RetryMode.Exponential
+                 }
+            };
+
+            var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential(),options);
+
+            Console.Write("Input the value of your secret > ");
+            string secretValue = Console.ReadLine();
+
+            Console.Write("Creating a secret in " + keyVaultName + " called '" + secretName + "' with the value '" + secretValue + "` ...");
+
+            client.SetSecret(secretName, secretValue);
+
+            Console.WriteLine(" done.");
+
+            Console.WriteLine("Forgetting your secret.");
+            secretValue = "";
+            Console.WriteLine("Your secret is '" + secretValue + "'.");
+
+            Console.WriteLine("Retrieving your secret from " + keyVaultName + ".");
+
+            KeyVaultSecret secret = client.GetSecret(secretName);
+
+            Console.WriteLine("Your secret is '" + secret.Value + "'.");
+
+            Console.Write("Deleting your secret from " + keyVaultName + " ...");
+
+            client.StartDeleteSecret(secretName);
+
+            System.Threading.Thread.Sleep(5000);
+            Console.WriteLine(" done.");
+
+        }
+    }
+```  
+We need to change some values to information from our secret. Make sure you put in your Key Vault name (such as AzureDevDocsKeyVault).  
+8. Back to our Key Vault, we need to obtain the key vault URI. On our key vault overview page, the vault URI is on the right hand side with a clipboard icon to copy to the clipboard. Insert this URI in your code.  
+9. Once everything is in place, it's time to run it! Open up your command line back into the same directory, and run the code: 
+```Shell
+dotnet run
+```  
+It will prompt you for a secret, and then immediately create it, retrieve it and delete it again.  
+![Picture of the output](images/vmstep3.png)  
