@@ -74,8 +74,9 @@ On this screen, you can give the secret a name, a value and optional parameters.
 ![Picture of secret generation](images/secretstep2.png)  
 This indicates your secret has been successfully added!  
 
+## Secrets - PowerShell/Azure CLI:
 ### PowerShell  
-There is no current implementation for a Secret in PowerShell.  
+There is no current implementation for a creating a Secret in PowerShell.  
 ### Azure CLI  
 ```Shell
 az keyvault secret set --name SecretName --vault-name AzureDevDocsVault --value SecretValue
