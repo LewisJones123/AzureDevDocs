@@ -20,7 +20,7 @@ Setting up an Azure Key Vault is relatively straightforward. As usual, you can e
 2. On the next screen, ensure that your resource group and subscription are set to the one you've been using throughout, and then set a name. The region can be whichever, choose one close to you. Leave the pricing tier as standard, as premium is far more expensive!  
 ![Image of key vault creation screen](images/step2.png)  
 > **Warning**  
-> The next section is extremely important. This is where you can enforce purge protection of secrets, ensuring they aren't deleted immediately.  
+> The next section is extremely important. This is where you can enforce purge protection of secrets/keys, ensuring they aren't deleted immediately.  
 > It is highly recommended that in a production environment, you enable purge protection, as this prevents immediate loss of secrets.  
 1. In terms of recovery options, set the days to retain deleted vaults to whatever you like between 7 and 90 days (the higher the better), and disable purge protection (we want to delete the vault at some point without having to wait ages!)  
 ![Image of key vault creation screen](images/step3.png)  
