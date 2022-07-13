@@ -85,12 +85,12 @@ az keyvault secret set --name SecretName --vault-name AzureDevDocsVault --value 
 
 # Obtaining a secret in .NET - Tutorial
 > **Warning**
-> This tutorial will not be completable with an Azure Free Tier account, as a free tier VM will struggle to run anything.  
-When creating a secret, it's worth checking that it's actually possible to get the secret!  
+> This tutorial will not be possible with an Azure Free Tier account, as a free tier VM will struggle to run anything.  
 
 > **Note**
 This is a more visual guide that Microsoft has provided [here.](https://docs.microsoft.com/en-us/azure/key-vault/general/tutorial-net-virtual-machine?tabs=azure-cli) The commands and code in this guide are provided by Microsoft.  
 
+When creating a secret, it's worth checking that it's actually possible to get the secret!  
 Utilising Azure VMs and the CLI we are able to do some secrets management.  
 1. Firstly, if you haven't already, provision a Windows VM. I recommend a B2s tier, with 2 CPU cores and 4GB of Memory, running Windows 10, 11, Server 2016, Server 2019 or Server 2022.  
 2. Remotely connect to your Virtual Machine using either SSH or RDP.  
