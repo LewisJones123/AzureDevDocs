@@ -6,6 +6,7 @@ Azure Key Vault helps you with this, using enterprise grade encryption for both 
 > **Note**  
 > As part of the Azure Tier, you recieve the following benefits free of charge (for 12 months):  
 > - 10,000 transactions using RSA-2048 Keys, or secrets, at the Standard tier.  
+
 Within Azure Key Vault, you can store the following things:  
 - Keys, with support for activation, expiration, RSA/EC keys, as well as tags. Key rotation also available.  
 - Secrets, with a name, value and activation/expiration date. Secrets can be checked within Azure, but must have admin privileges.  
