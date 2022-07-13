@@ -3,9 +3,9 @@
 In a lot of your applications, especially those which are connected to the internet, you will require data such as Connection Strings, API Keys and more to be stored. As these can make your app extremely vulnerable if stored incorrectly, it is important that they are stored in an encrypted manner.  
 Azure Key Vault helps you with this, using enterprise grade encryption for both your generated keys as well as your secrets. You can then use links to these secrets and keys in confidence, knowing that they are fully encrypted at rest and during transit, only being decrypted at the destination where it is required.  
 # Azure Key Vault - Supported types:
-> **Info**  
-> As part of the Azure Tier, you recieve the following benefits free of charge (for 12 months):
-> 10,000 transactions using RSA-2048 Keys, or secrets, at the Standard tier.
+> **Note**  
+> As part of the Azure Tier, you recieve the following benefits free of charge (for 12 months):  
+> - 10,000 transactions using RSA-2048 Keys, or secrets, at the Standard tier.  
 Within Azure Key Vault, you can store the following things:  
 - Keys, with support for activation, expiration, RSA/EC keys, as well as tags. Key rotation also available.  
 - Secrets, with a name, value and activation/expiration date. Secrets can be checked within Azure, but must have admin privileges.  
