@@ -158,6 +158,7 @@ class Program
             client.StartDeleteSecret(secretName);
 
             System.Threading.Thread.Sleep(5000);
+
             Console.WriteLine(" done.");
 
         }
@@ -171,3 +172,8 @@ dotnet run
 ```  
 It will prompt you for a secret, and then immediately create it, retrieve it and delete it again.  
 ![Picture of the output](images/vmstep3.png)  
+If you already have a secret in your vault, we can also obtain it pretty easily with one extra line of code:  
+```c#
+KeyVaultSecret secretVal = client.GetSecret("<secretName>")
+```  
+After you have seen your secret, you have completed the tutorial! You can now get secrets from a VM! You will need to do some extra networking configuration, but it would be possible to also do this from a regular machine, too.
