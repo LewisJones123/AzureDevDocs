@@ -106,4 +106,5 @@ Within each tier, there are sub tiers, which have differing amounts of CPU cores
 - Basic Service Plan Instance B2: 2 CPU cores, 3.50GB RAM, 10GB Storage: $0.15/hour.
 - Isolated v2 Service Plan Instance I3v2: 8 CPU cores, 32GB RAM, 1TB Storage: Prices start at $1.216/hour for 3 year reserved, $2.248/hour for Pay as you go
 
-(Please note: If you, or your business has Windows Server licenses that are transferrable to Azure, you may be eligible for heavy discounts utilising parts of your Azure license). Read more about Azure Hybrid benefit pricing at: https://azure.microsoft.com/en-gb/pricing/hybrid-benefit/#faqs).
+(Please note: If you, or your business has Windows Server licenses that are transferrable to Azure, you may be eligible for heavy discounts utilising parts of your Azure license). Read more about Azure Hybrid benefit pricing at: https://azure.microsoft.com/en-gb/pricing/hybrid-benefit/#faqs).  
+# TO DO - AZURE DEVOPS
