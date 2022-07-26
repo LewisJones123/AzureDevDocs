@@ -52,4 +52,45 @@ Professional Direct - $1,000 per month. Includes:
 - Operations support: Service reviews and adivsory consultation.
 - Webinar training led by Azure Experts.
 - Proactive Guidance from a pool of delivery managers.
-There may be additional Enterprise tiers available, for example for Government clients in the US, however limited information is available for these, and they are far out of scope for this documentation.
+There may be additional Enterprise tiers available, for example for Government clients in the US, however limited information is available for these, and they are far out of scope for this documentation.  
+# Azure Web Service Plans
+As part of Azure Web Service, there are six tiers available, ranging from a free plan to an isolated high performance plan.  
+Each plan has perks, as listed below. Note that these are all subject to change, and are accurate as of July 2022.  
+Free plan - Try for free:
+- 10 Web, Mobile or API apps
+- 1GB of Disk Space
+- Shared Compute Type  
+Shared plan - Environment for dev/test ($0.013/hour)  
+- 100 Web, mobile or API apps
+- No increase in disk space over free tier.
+- Ability to use Customised Domains.
+- Shared compute type.  
+Basic - Dedicated Environment for dev/test
+- Unlimited number of Web, Mobile or API apps.
+- 10GB of Disk Space (up from 1GB in Free/Shared).
+- Up to 3 maximum instances (up from 1).
+- Support for Customised Domain, Hybrid connectivity, Virtual Network connectivity & Private Endpoints
+- Dedicated Compute Type
+Standard - Run Production Workloads
+- Unlimited number of Web, Mobile or API apps.
+- 50GB of Disk Space (up from 10GB in Basic).
+- Up to 10 maximum instances.
+- Support for Customised Domain, Hybrid Connectivity, Auto Scaling, Virtual Network Connectivity & Private Endpoints.
+- Dedicated Compute Type
+Premium - Enhanced Performance and Scale
+- As Dedicated tier and:
+- 250GB of Disk Space (up from 50GB).
+- Up to 30 maximum instances (NOTE: NOT ALL REGIONS SUPPORT THIS!) (up from 10)
+Isolated - High-Performance, Security and Isolation
+- As Premium tier and:
+- 1TB of Disk Space (up from 250GB).
+- Up to 100 maximum instances (Supported by all regions).
+- Isolated Compute Type.  
+
+Wow - that's a lot of features! But there's more.  
+Within each tier, there are sub tiers, which have differing amounts of CPU cores, RAM and storage, for different prices. I won't list them all here as there are a few instances, but here are some examples:  
+- Basic Service Plan Instance B1: 1 CPU core, 1.75GB RAM, 10GB Storage: $0.075/hour.
+- Basic Service Plan Instance B2: 2 CPU cores, 3.50GB RAM, 10GB Storage: $0.15/hour.
+- Isolated v2 Service Plan Instance I3v2: 8 CPU cores, 32GB RAM, 1TB Storage: Prices start at $1.216/hour for 3 year reserved, $2.248/hour for Pay as you go
+
+(Please note: If you, or your business has Windows Server licenses that are transferrable to Azure, you may be eligible for heavy discounts utilising parts of your Azure license). Read more about Azure Hybrid benefit pricing at: https://azure.microsoft.com/en-gb/pricing/hybrid-benefit/#faqs).
